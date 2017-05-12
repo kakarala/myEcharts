@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="./echarts.common.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 434px;height:264px;"></div>
+    <div id="btns">
+        <a href="javascript:void(0);" minus="1">1个月</a>
+        <a href="javascript:void(0);" minus="3">3个月</a>
+        <a href="javascript:void(0);" minus="6">6个月</a>
+        <a href="javascript:void(0);" minus="12">1年</a>
+        <a href="javascript:void(0);" minus="36">3年</a>
+        <a href="javascript:void(0);" minus="nowyear">今年以来</a>
+        <a href="javascript:void(0);" minus="max">最大</a>
+    </div>
+
+    <script src='./jquery.js'></script>
+    <script>
+        var url = location.href;
+        sessionStorage.setItem('code', url.split('?')[1]);
+        var fundCode = sessionStorage.getItem('code');
+    </script>
+    <script src='./drawGraph.js'></script>
+</body>
+</html>
